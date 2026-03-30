@@ -1,46 +1,30 @@
 'use client';
 
 import Link from 'next/link';
-import { Icon } from '@iconify/react';
+import { motion } from 'framer-motion';
 
-export default function MobileMenu({ links, isOpen, onClose }) {
+const menuItemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1, x: 0,
+    transition: { ease: 'easeOut', duration: 0.2 },
+  },
+};
+
+export default function MobileMenu({ links, onClose }) {
   return (
-    <>
-      {/* Overlay */}
-      <div
-        onClick={onClose}
-        className={`fixed inset-0 z-[199] bg-black/60 transition-opacity duration-300
-        ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-      />
-
-      {/* Drawer */}
-      <aside
-        className={`fixed top-0 right-0 bottom-0 w-72 z-[200] bg-black border-l border-white/10
-        px-6 py-8 flex flex-col transition-transform duration-300
-        ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
-      >
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="text-gray-400 hover:text-white text-lg mb-8 self-end"
-        >
-          <Icon icon="mdi:close" className="w-6 h-6" />
-        </button>
-
-        {/* Links */}
-        <nav className="flex flex-col gap-6">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              onClick={onClose}
-              className="text-lg font-semibold text-gray-300 hover:text-white"
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
-      </aside>
-    </>
+    <motion.div className="px-2 pt-2 pb-3 space-y-1 text-gray-300">
+      {links.map((l) => (
+        <motion.div key={l.href} variants={menuItemVariants}>
+          <Link
+            href={l.href}
+            onClick={onClose}
+            className="block px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:text-purple-500"
+          >
+            {l.label}
+          </Link>
+        </motion.div>
+      ))}
+    </motion.div>
   );
 }

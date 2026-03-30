@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import MobileMenu from './MobileMenu';
 import Image from 'next/image';
+import { Icon } from '@iconify/react';
+import { motion, AnimatePresence } from 'framer-motion';
+import MobileMenu from './MobileMenu';
 
 const navLinks = [
     { label: 'Home', href: '/' },
@@ -14,9 +16,29 @@ const navLinks = [
     { label: 'Jobs', href: '/jobs' },
 ];
 
+const mobileMenuVariants = {
+    hidden: {
+        opacity: 0,
+        height: 0,
+        transition: {
+            when: 'afterChildren',
+            staggerChildren: 0.05,
+            staggerDirection: -1,
+        },
+    },
+    visible: {
+        opacity: 1,
+        height: 'auto',
+        transition: {
+            when: 'beforeChildren',
+            staggerChildren: 0.1,
+        },
+    },
+};
+
 export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const fn = () => setScrolled(window.scrollY > 20);
@@ -25,59 +47,76 @@ export default function Navbar() {
     }, []);
 
     return (
-        <>
-            <header
-                className={`fixed top-0 left-0 right-0 z-300 transition-all duration-300
+        <nav
+            className={`fixed z-50 transition-all duration-300 top-3 lg:top-5 left-1/2 -translate-x-1/2 w-[calc(100vw-40px)] lg:w-7xl rounded-3xl shadow-sm backdrop-blur-md
         ${scrolled
-                        ? 'bg-black/80 backdrop-blur-xl border-b border-white/10'
-                        : 'bg-transparent'
-                    }`}
-            >
-                <div className="max-w-6xl mx-auto px-6 h-[90px] flex items-center justify-between">
+                    ? 'bg-white/5 border border-white/5'
+                    : 'bg-white/5  border border-white/5'
+                }`}
+        >
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between h-16 lg:h-20 items-center">
 
                     {/* Logo */}
-                    <Link href="/" className="flex items-center">
+                    <Link href="/" className="shrink-0">
                         <Image
                             src="/Logo.svg"
-                            alt="Xeron"
+                            alt="Logo"
                             width={140}
                             height={32}
-                            className="w-[100px] md:w-[120px] lg:w-[140px] h-auto"
+                            className="w-[80px] md:w-[100px] lg:w-[120px] h-auto"
                         />
                     </Link>
 
-                    {/* Desktop Nav */}
-                    <nav className="hidden md:flex items-center gap-10">
-                        {navLinks.map((l) => (
+                    {/* Desktop nav */}
+                    <div className="hidden md:flex md:space-x-8 text-gray-300">
+                        {navLinks.map((l, i) => (
                             <Link
-                                key={l.href}
+                                key={i}
                                 href={l.href}
-                                className="text-lg text-gray-300 hover:text-white transition"
+                                className="opacity-50 inline-flex items-center px-1 pt-1 border-b-2 border-transparent
+                  text-base font-medium transition duration-300 hover:text-purple-50 hover:font-bold hover:opacity-100"
                             >
                                 {l.label}
                             </Link>
                         ))}
-                    </nav>
+                    </div>
 
-                    {/*Hamburger */}
-                    <button
-                        onClick={() => setMenuOpen(true)}
-                        className="md:hidden flex flex-col justify-center items-center gap-[6px] w-10 h-10 z-400"
-                        aria-label="Open menu"
-                    >
-                        <span className="block w-6 h-[2px] bg-white rounded" />
-                        <span className="block w-6 h-[2px] bg-white rounded" />
-                        <span className="block w-6 h-[2px] bg-white rounded" />
-                    </button>
+                    {/* Mobile hamburger — toggles ☰ / ✕ */}
+                    <div className="md:hidden flex items-center">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-expanded={isMenuOpen}
+                            className="inline-flex items-center justify-center p-2 rounded-md
+                text-gray-300 hover:text-purple-500 focus:outline-none transition duration-300"
+                        >
+                            <span className="sr-only">Toggle menu</span>
+                            {isMenuOpen
+                                ? <Icon icon="mdi:close" className="w-6 h-6" />
+                                : <Icon icon="mdi:menu" className="w-6 h-6" />
+                            }
+                        </button>
+                    </div>
                 </div>
-            </header>
+            </div>
 
-            {/* Mobile Menu */}
-            <MobileMenu
-                links={navLinks}
-                isOpen={menuOpen}
-                onClose={() => setMenuOpen(false)}
-            />
-        </>
+            {/* Mobile dropdown — expands inside the navbar */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={mobileMenuVariants}
+                        className="md:hidden overflow-hidden"
+                    >
+                        <MobileMenu
+                            links={navLinks}
+                            onClose={() => setIsMenuOpen(false)}
+                        />
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </nav>
     );
 }
