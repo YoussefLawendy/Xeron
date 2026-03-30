@@ -8,11 +8,11 @@ export default function HeroSection() {
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-accent/20 blur-[80px] -z-10 pointer-events-none" />
 
             <div className="relative z-10 max-w-[1200px] mx-auto">
-                <h1 className="font-display text-[36px] md:text-[48px] lg:text-[64px] font-extrabold text-content-primary tracking-tight leading-[1.13] mb-[80px] animate-fade-up">
+                <h1 className="font-display text-[32px] md:text-[48px] lg:text-[64px] font-extrabold text-content-primary tracking-tight leading-[1.13] mb-[32px] md:mb-[80px] animate-fade-up">
                     We Build Digital Solutions That Drive Business Growth
                 </h1>
 
-                <p className="text-[24px] text-[#6F6E7B] leading-[28px] max-w-[1200px] mx-auto mb-[80px] animate-fade-up-2">
+                <p className="text-[16px] md:text-[24px] text-[#6F6E7B] leading-[28px] max-w-[1200px] mx-auto mb-[40px] md:mb-[80px] animate-fade-up-2">
                     XERON specializes in custom websites, mobile apps, complex systems, and stunning designs.
                 </p>
 
