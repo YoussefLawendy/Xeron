@@ -21,7 +21,7 @@ export default function AboutPage() {
             <div className="max-w-7xl mx-auto">
 
                 {/* Hero */}
-                <div className="max-w-2xl mb-24">
+                <div className="max-w-7xl mt-40 mb-24 text-center">
                     <SectionHeader
                         title="The Minds Behind XERON"
                         subtitle="We started as college friends with a shared obsession — technology that actually moves people. That hasn't changed."
@@ -31,8 +31,8 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                {/* Team image */}
-                <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden border border-bg-border mb-24">
+                {/* Team image (hidden on mobile) */}
+                <div className="hidden md:block relative w-full aspect-16/7 rounded-2xl overflow-hidden border border-bg-border mb-24">
                     <Image
                         src="/ImagePlaceholder.png"
                         alt="XERON Team"
@@ -42,53 +42,127 @@ export default function AboutPage() {
                     />
                 </div>
 
-                {/* Story */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-24">
-                    <div>
-                        <h2 className="font-display text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold
-              text-content-primary tracking-tight mb-5">
-                            How It Started
-                        </h2>
-                        <p className="text-[15px] text-content-secondary leading-[1.8]">
-                            XERON was born in 2022 from a college dorm and a stubborn belief that great software
-                            shouldn&apos;t be a luxury reserved for funded startups. Two friends, one laptop, and a lot
-                            of late nights later — we built our first client project. Then another. Then ten more.
-                        </p>
-                    </div>
-                    <div>
-                        <h2 className="font-display text-[clamp(1.6rem,3vw,2.2rem)] font-extrabold
-              text-content-primary tracking-tight mb-5">
-                            Where We Are Now
-                        </h2>
-                        <p className="text-[15px] text-content-secondary leading-[1.8]">
-                            Today XERON is a full-service digital agency — design, development, branding — all
-                            under one roof. We work with entrepreneurs and early-stage companies who want to move
-                            fast and look great doing it.
-                        </p>
-                    </div>
-                </div>
+                {/* Stories */}
+                <div className="flex flex-col gap-[80px]">
 
-                {/* Values */}
-                <div>
-                    <SectionHeader title="What We Stand For" centered />
-                    <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {values.map((v) => (
-                            <div
-                                key={v.title}
-                                className="bg-bg-card border border-bg-border rounded-2xl p-7
-                  hover:border-accent hover:-translate-y-1 hover:shadow-card
-                  transition-all duration-200"
-                            >
-                                <span className="text-2xl mb-4 block">
-                                    <Icon icon={v.icon} className="w-7 h-7" aria-hidden />
-                                </span>
-                                <h3 className="font-display font-bold text-content-primary mb-2">{v.title}</h3>
-                                <p className="text-[13px] text-content-secondary leading-[1.7]">{v.desc}</p>
+                    {/* Story 1 */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
+
+                        {/* Image */}
+                        <div className="col-span-1 order-1 lg:order-0 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-[360px] mx-auto lg:max-w-none h-full">
+                            <div className="relative w-full h-full min-h-[320px] rounded-[16px] overflow-hidden bg-white">
+                                <Image
+                                    src="/ImagePlaceholder.png"
+                                    alt="Who We Are"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
-                        ))}
+                        </div>
+
+                        {/* Content */}
+                        <div className="col-span-2 order-2 lg:order-0 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                XERON is a full-service digital agency built for startups and entrepreneurs.
+                                We design, develop, and brand — websites, mobile apps, and visual identities
+                                that make growing businesses impossible to ignore.
+                            </p>
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                Born from a college idea in 2022, we turned a friendship and a passion for
+                                technology into something real. Today, every project we take on carries that
+                                same energy — focused, intentional, and always built to last.
+                            </p>
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                Born from a college idea in 2022, we turned a friendship and a passion for
+                                technology into something real. Today, every project we take on carries that
+                                same energy — focused, intentional, and always built to last.
+                            </p>
+                        </div>
                     </div>
+
+                    {/* Story 2 */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
+
+                        {/* Image */}
+                        <div className="col-span-1 order-1 lg:order-2 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-[360px] mx-auto lg:max-w-none h-full">
+                            <div className="relative w-full h-full min-h-[320px] rounded-[16px] overflow-hidden bg-white">
+                                <Image
+                                    src="/ImagePlaceholder.png"
+                                    alt="Who We Are"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="col-span-2 order-2 lg:order-1 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                XERON is a full-service digital agency built for startups and entrepreneurs.
+                                We design, develop, and brand — websites, mobile apps, and visual identities
+                                that make growing businesses impossible to ignore.
+                            </p>
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                Born from a college idea in 2022, we turned a friendship and a passion for
+                                technology into something real. Today, every project we take on carries that
+                                same energy — focused, intentional, and always built to last.
+                            </p>
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                Born from a college idea in 2022, we turned a friendship and a passion for
+                                technology into something real. Today, every project we take on carries that
+                                same energy — focused, intentional, and always built to last.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Story 3 */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
+
+                        {/* Image */}
+                        <div className="col-span-1 order-1 lg:order-0 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-[360px] mx-auto lg:max-w-none h-full">
+                            <div className="relative w-full h-full min-h-[320px] rounded-[16px] overflow-hidden bg-white">
+                                <Image
+                                    src="/ImagePlaceholder.png"
+                                    alt="Who We Are"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="col-span-2 order-2 lg:order-0 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                XERON is a full-service digital agency built for startups and entrepreneurs.
+                                We design, develop, and brand — websites, mobile apps, and visual identities
+                                that make growing businesses impossible to ignore.
+                            </p>
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                Born from a college idea in 2022, we turned a friendship and a passion for
+                                technology into something real. Today, every project we take on carries that
+                                same energy — focused, intentional, and always built to last.
+                            </p>
+                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                                Born from a college idea in 2022, we turned a friendship and a passion for
+                                technology into something real. Today, every project we take on carries that
+                                same energy — focused, intentional, and always built to last.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
+                {/* Team image (appear on mobile) */}
+                <div className="block md:hidden mt-24">
+                    <div className="relative w-full aspect-16/7 rounded-2xl overflow-hidden border border-bg-border">
+                        <Image
+                            src="/ImagePlaceholder.png"
+                            alt="XERON Team"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -27,7 +27,7 @@ export default function Navbar() {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-[300] transition-all duration-300
+                className={`fixed top-0 left-0 right-0 z-300 transition-all duration-300
         ${scrolled
                         ? 'bg-black/80 backdrop-blur-xl border-b border-white/10'
                         : 'bg-transparent'
@@ -62,7 +62,7 @@ export default function Navbar() {
                     {/*Hamburger */}
                     <button
                         onClick={() => setMenuOpen(true)}
-                        className="md:hidden flex flex-col justify-center items-center gap-[6px] w-10 h-10 z-[400]"
+                        className="md:hidden flex flex-col justify-center items-center gap-[6px] w-10 h-10 z-400"
                         aria-label="Open menu"
                     >
                         <span className="block w-6 h-[2px] bg-white rounded" />

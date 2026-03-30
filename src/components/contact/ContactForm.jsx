@@ -11,7 +11,7 @@ const serviceTypes = ['Web', 'Mobile', 'Design'];
 function GradientField({ children, focused }) {
     return (
         <div
-            className={`p-[2px] rounded-lg transition-opacity duration-200 bg-gradient-to-bl
+            className={`p-[2px] rounded-lg transition-opacity duration-200 bg-linear-to-bl
                 from-purple-200 via-purple-50 to-purple-500
                 ${focused ? 'opacity-100' : 'opacity-60'}`}
         >
@@ -69,8 +69,8 @@ function RadioButton({ label, checked, onChange }) {
 
             {/* Outer ring — always gradient border, opacity fades when unchecked */}
             <span
-                className={`relative w-6 h-6 rounded-full flex-shrink-0 p-[2px]
-                    bg-gradient-to-bl from-purple-200 via-purple-50 to-purple-500
+                className={`relative w-6 h-6 rounded-full shrink-0 p-[2px]
+                    bg-linear-to-bl from-purple-200 via-purple-50 to-purple-500
                     transition-opacity duration-200
                     ${checked ? 'opacity-100' : 'opacity-40'}`}
             >
@@ -78,7 +78,7 @@ function RadioButton({ label, checked, onChange }) {
                 <span className="w-full h-full rounded-full bg-purple-975 flex items-center justify-center">
                     {/* Dot — only visible when selected, gradient fill */}
                     {checked && (
-                        <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-bl from-purple-200 via-purple-50 to-purple-500" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-linear-to-bl from-purple-200 via-purple-50 to-purple-500" />
                     )}
                 </span>
             </span>

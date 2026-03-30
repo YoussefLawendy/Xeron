@@ -6,10 +6,8 @@ const variants = {
     ghost: 'bg-transparent text-accent-light hover:text-content-primary',
 };
 
-export default function Button({ children, href, variant = 'primary', arrow = false, fullWidth = false, onClick, type = 'button' }) {
-    const base = `inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
-    text-[16px] font-medium transition-all duration-200 hover:-translate-y-px cursor-pointer
-    ${variants[variant]} ${fullWidth ? 'w-full' : ''}`;
+export default function Button({ children, href, variant = 'primary', arrow = false, fullWidth = false, onClick, type = 'button', className = '' }) {
+    const base = `inline-flex items-center justify-center gap-2 px-4 py-3 md:px-6 md:py-3 rounded-lg text-[14px] md:text-[16px] font-medium transition-all duration-200 hover:-translate-y-px cursor-pointer ${variants[variant]} ${fullWidth ? 'w-full' : ''} ${className}`;
 
     if (href) {
         return (
