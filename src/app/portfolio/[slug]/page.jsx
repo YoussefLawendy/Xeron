@@ -22,7 +22,7 @@ export default function PortfolioDetailPage({ params }) {
         <div className="pt-32 pb-20 px-6">
             <div className="max-w-6xl mx-auto">
 
-                <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-bg-border mb-12">
+                <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-bg-border mb-12">
                     <Image
                         src={item.image || '/ImagePlaceholder.png'}
                         alt={item.title}

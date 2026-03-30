@@ -3,7 +3,7 @@ import PortfolioCard from '@/components/portfolio/PortfolioCard';
 import { portfolio } from '@/data/portfolio';
 
 export const metadata = {
-    title: 'Portfolio — XERON',
+    title: 'XERON -Portfolio',
     description: 'Real projects. Real impact. Built for people who think bigger.',
 };
 

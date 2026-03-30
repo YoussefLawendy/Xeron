@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 import Image from 'next/image';
 
 export const metadata = {
-    title: 'About Us — XERON',
+    title: 'XERON -About Us',
     description: 'The minds behind XERON — a full-service digital agency built for startups.',
 };
 

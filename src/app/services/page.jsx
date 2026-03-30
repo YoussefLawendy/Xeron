@@ -3,7 +3,7 @@ import ServiceCard from '@/components/services/ServiceCard';
 import { services } from '@/data/services';
 
 export const metadata = {
-    title: 'Services — XERON',
+    title: 'XERON -Services',
     description: 'Everything your startup needs to build, launch, and grow — under one roof.',
 };
 

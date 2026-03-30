@@ -3,7 +3,7 @@ import ContactForm from '@/components/contact/ContactForm';
 import ContactInfo from '@/components/contact/ContactInfo';
 
 export const metadata = {
-    title: 'Contact Us — XERON',
+    title: 'XERON -Contact Us',
     description: 'Let\'s build something great together. Reach out to the XERON team.',
 };
 
