@@ -48,11 +48,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed z-50 transition-all duration-300 top-3 lg:top-5 left-1/2 -translate-x-1/2 w-[calc(100vw-40px)] lg:w-7xl rounded-3xl shadow-sm backdrop-blur-md
-        ${scrolled
-                    ? 'bg-white/5 border border-white/5'
-                    : 'bg-white/5  border border-white/5'
-                }`}
+            className={`fixed z-50 transition-all duration-300 top-3 lg:top-5 left-1/2 -translate-x-1/2 w-[calc(100vw-40px)] lg:w-7xl rounded-3xl shadow-sm backdrop-blur-md ${scrolled ? 'bg-white/5 border border-white/5' : 'bg-white/5  border border-white/5'}`}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 lg:h-20 items-center">
@@ -74,8 +70,7 @@ export default function Navbar() {
                             <Link
                                 key={i}
                                 href={l.href}
-                                className="opacity-50 inline-flex items-center px-1 pt-1 border-b-2 border-transparent
-                  text-base font-medium transition duration-300 hover:text-purple-50 hover:font-bold hover:opacity-100"
+                                className="opacity-50 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-base font-medium transition duration-300 hover:text-purple-50 hover:font-bold hover:opacity-100"
                             >
                                 {l.label}
                             </Link>
@@ -87,8 +82,7 @@ export default function Navbar() {
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             aria-expanded={isMenuOpen}
-                            className="inline-flex items-center justify-center p-2 rounded-md
-                text-gray-300 hover:text-purple-500 focus:outline-none transition duration-300"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-purple-500 focus:outline-none transition duration-300"
                         >
                             <span className="sr-only">Toggle menu</span>
                             {isMenuOpen

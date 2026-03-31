@@ -28,9 +28,9 @@ function GradientBorderIcon({ icon, href, label }) {
             aria-label={label}
             className="opacity-50 relative inline-flex rounded-full p-[1.5px] bg-linear-to-br from-purple-200/50 via-purple-50/50 to-purple-500/50 hover:opacity-100 transition-all duration-200 hover:-translate-y-0.5"
         >
-            <span className="w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center bg-purple-1000 relative">
+            <span className="w-6 h-6 md:w-9 md:h-9 rounded-full flex items-center justify-center bg-purple-1000 relative">
                 <span className="absolute inset-0 rounded-full bg-purple-50/10" />
-                <Icon icon={icon} className="w-4 h-4 md:w-5 md:h-5 text-content-primary relative z-10" aria-hidden />
+                <Icon icon={icon} className="w-3 h-3 md:w-5 md:h-5 text-content-primary relative z-10" aria-hidden />
             </span>
         </a>
     );
@@ -44,7 +44,7 @@ export default function Footer() {
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center mb-8 md:mb-10 opacity-80">
-                    <Image src="/Logo.svg" alt="Xeron Logo" width={100} height={60} className="md:w-[120px] md:h-auto" />
+                    <Image src="/Logo.svg" alt="Xeron Logo" width={80} height={60} className="md:w-[120px] md:h-auto" />
                 </Link>
 
                 {/* Nav */}
@@ -53,7 +53,7 @@ export default function Footer() {
                         <Link
                             key={l.href}
                             href={l.href}
-                            className="text-sm md:text-base lg:text-[16px] text-purple-50/50 hover:text-white hover:font-semibold transition-all duration-200 hover:-translate-y-0.5"
+                            className="text-xs md:text-base lg:text-[16px] text-purple-50/50 hover:text-white hover:font-semibold transition-all duration-200 hover:-translate-y-0.5"
                         >
                             {l.label}
                         </Link>
@@ -68,10 +68,10 @@ export default function Footer() {
                 </div>
 
                 {/* Divider */}
-                <div className="w-full h-[0.5px] bg-purple-50/40 mb-4 md:mb-5" />
+                <div className="w-97 md:w-full h-[0.1px] bg-purple-50/40 mb-4 md:mb-5" />
 
                 {/* Copyright */}
-                <p className="text-[11px] md:text-xs lg:text-sm text-purple-50/60 text-center leading-relaxed">
+                <p className="text-[8px] md:text-xs lg:text-sm text-purple-50/60 text-center leading-relaxed">
                     © 2026 XERON. All rights reserved. Built with passion for the brands that dare to grow.
                 </p>
 
