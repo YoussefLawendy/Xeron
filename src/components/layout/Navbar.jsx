@@ -48,7 +48,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed z-50 transition-all duration-300 top-3 lg:top-5 left-1/2 -translate-x-1/2 w-[calc(100vw-40px)] lg:w-7xl rounded-3xl shadow-sm backdrop-blur-md ${scrolled ? 'bg-white/5 border border-white/5' : 'bg-white/5  border border-white/5'}`}
+            className={`fixed z-50 transition-all duration-300 top-3 lg:top-5 left-1/2 -translate-x-1/2 w-[calc(100%-24px)] sm:w-[calc(100%-40px)] lg:w-7xl rounded-3xl shadow-sm backdrop-blur-md ${scrolled ? 'bg-white/5 border border-white/5' : 'bg-white/5  border border-white/5'}`}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 lg:h-20 items-center">

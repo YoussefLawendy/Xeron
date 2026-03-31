@@ -34,8 +34,8 @@ export default function ContactInfo() {
                     <Icon icon="mynaui:mail" className="w-6 h-6" />
                 </div>
                 <div className="flex flex-col gap-4">
-                    <span className="text-xs md:text-[20px] font-bold text-content-primary">Email</span>
-                    <a href="mailto:Youssef@xeron.com" className="text-[10px] md:text-[16px] font-bold text-purple-50/50 hover:text-purple-50/80 transition-colors duration-200">
+                    <span className="text-[16px] md:text-[20px] font-bold text-content-primary">Email</span>
+                    <a href="mailto:Youssef@xeron.com" className="text-xs md:text-[16px] font-bold text-purple-50/50 hover:text-purple-50/80 transition-colors duration-200">
                         Youssef@xeron.com
                     </a>
                 </div>
@@ -47,8 +47,8 @@ export default function ContactInfo() {
                     <Icon icon="mynaui:telephone-call" className="w-6 h-6" />
                 </div>
                 <div className="flex flex-col gap-4">
-                    <span className="text-xs md:text-[20px] font-bold text-content-primary">Phone</span>
-                    <a href="tel:+201063361951" className="text-[10px] md:text-[16px] font-bold text-purple-50/50 hover:text-purple-50/80 transition-colors duration-200">
+                    <span className="text-[16px] md:text-[20px] font-bold text-content-primary">Phone</span>
+                    <a href="tel:+201063361951" className="text-xs md:text-[16px] font-bold text-purple-50/50 hover:text-purple-50/80 transition-colors duration-200">
                         +201063361951
                     </a>
                 </div>

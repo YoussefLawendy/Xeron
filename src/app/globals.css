@@ -42,6 +42,7 @@ body {
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
   color: var(--foreground);
   font-family: var(--font-ibm-plex-sans), sans-serif;
 }
