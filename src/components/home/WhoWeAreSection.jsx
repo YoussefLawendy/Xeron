@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function WhoWeAreSection() {
     return (
-        <section className="py-[48px] px-[20px] md:py-[64px] md:px-[32px] lg:py-[80px] lg:px-[48px]">
+        <section className="py-[48px] px-[20px] md:py-[64px] md:px-[32px] lg:py-[80px] lg:px-[48px] overflow-hidden">
             <div className="max-w-[1280px] mx-auto">
                 <SectionHeader title="Who We Are" centered />
 

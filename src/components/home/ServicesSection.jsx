@@ -5,7 +5,7 @@ import { services } from '@/data/services';
 
 export default function ServicesSection() {
     return (
-        <section className="py-20 px-6">
+        <section className="py-20 px-6 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <SectionHeader
                     title="Our Services"

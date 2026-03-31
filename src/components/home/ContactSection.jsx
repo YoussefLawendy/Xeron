@@ -8,7 +8,7 @@ const innerCardClass = 'rounded-2xl bg-gradient-to-br from-purple-950 to-purple-
 export default function ContactSection() {
     return (
         <section className="py-24 px-6" id="contact">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto overflow-hidden">
 
                 <SectionHeader
                     title="Contact Us"
