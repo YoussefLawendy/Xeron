@@ -35,6 +35,10 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--background);
   background-image: url("/BG.png");
