@@ -1,19 +1,11 @@
 import SectionHeader from '@/components/ui/SectionHeader';
 import Button from '@/components/ui/Button';
-import { Icon } from '@iconify/react';
 import Image from 'next/image';
 
 export const metadata = {
     title: 'XERON -About Us',
     description: 'The minds behind XERON — a full-service digital agency built for startups.',
 };
-
-const values = [
-    { icon: 'mdi:target', title: 'Intentional', desc: 'Every decision is purposeful. We never build something just because it looks cool — it has to work.' },
-    { icon: 'mdi:flash', title: 'Fast', desc: 'We move fast without cutting corners. Speed and quality aren\'t mutually exclusive at XERON.' },
-    { icon: 'mdi:handshake', title: 'Transparent', desc: 'No surprises. You\'ll always know where your project stands, what\'s next, and why.' },
-    { icon: 'mdi:refresh', title: 'Built to Last', desc: 'We build systems that scale. Your growth is the only thing that should limit you.' },
-];
 
 export default function AboutPage() {
     return (
@@ -49,30 +41,31 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
 
                         {/* Image */}
-                        <div className="col-span-1 order-1 lg:order-0 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-[360px] mx-auto lg:max-w-none h-full">
-                            <div className="relative w-full h-full min-h-[320px] rounded-[16px] overflow-hidden bg-white">
+                        <div className="col-span-1 order-1 lg:order-0 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-full mx-auto lg:max-w-none">
+                            <div className="relative w-full aspect-16/10 md:aspect-video min-h-[220px] md:min-h-[320px] rounded-[16px] overflow-hidden bg-white">
                                 <Image
                                     src="/ImagePlaceholder.png"
                                     alt="Who We Are"
                                     fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="object-cover"
                                 />
                             </div>
                         </div>
 
                         {/* Content */}
-                        <div className="col-span-2 order-2 lg:order-0 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                        <div className="col-span-1 lg:col-span-2 order-2 lg:order-0 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 XERON is a full-service digital agency built for startups and entrepreneurs.
                                 We design, develop, and brand — websites, mobile apps, and visual identities
                                 that make growing businesses impossible to ignore.
                             </p>
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
                             </p>
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
@@ -84,30 +77,31 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
 
                         {/* Image */}
-                        <div className="col-span-1 order-1 lg:order-2 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-[360px] mx-auto lg:max-w-none h-full">
-                            <div className="relative w-full h-full min-h-[320px] rounded-[16px] overflow-hidden bg-white">
+                        <div className="col-span-1 order-1 lg:order-2 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-full mx-auto lg:max-w-none">
+                            <div className="relative w-full aspect-16/10 md:aspect-video min-h-[220px] md:min-h-[320px] rounded-[16px] overflow-hidden bg-white">
                                 <Image
                                     src="/ImagePlaceholder.png"
                                     alt="Who We Are"
                                     fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="object-cover"
                                 />
                             </div>
                         </div>
 
                         {/* Content */}
-                        <div className="col-span-2 order-2 lg:order-1 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                        <div className="col-span-1 lg:col-span-2 order-2 lg:order-1 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 XERON is a full-service digital agency built for startups and entrepreneurs.
                                 We design, develop, and brand — websites, mobile apps, and visual identities
                                 that make growing businesses impossible to ignore.
                             </p>
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
                             </p>
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
@@ -119,30 +113,31 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
 
                         {/* Image */}
-                        <div className="col-span-1 order-1 lg:order-0 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-[360px] mx-auto lg:max-w-none h-full">
-                            <div className="relative w-full h-full min-h-[320px] rounded-[16px] overflow-hidden bg-white">
+                        <div className="col-span-1 order-1 lg:order-0 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-full mx-auto lg:max-w-none">
+                            <div className="relative w-full aspect-16/10 md:aspect-video min-h-[220px] md:min-h-[320px] rounded-[16px] overflow-hidden bg-white">
                                 <Image
                                     src="/ImagePlaceholder.png"
                                     alt="Who We Are"
                                     fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="object-cover"
                                 />
                             </div>
                         </div>
 
                         {/* Content */}
-                        <div className="col-span-2 order-2 lg:order-0 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                        <div className="col-span-1 lg:col-span-2 order-2 lg:order-0 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 XERON is a full-service digital agency built for startups and entrepreneurs.
                                 We design, develop, and brand — websites, mobile apps, and visual identities
                                 that make growing businesses impossible to ignore.
                             </p>
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
                             </p>
-                            <p className="text-base md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.

@@ -68,7 +68,7 @@ export default function Footer() {
                 </div>
 
                 {/* Divider */}
-                <div className="w-97 md:w-full h-[0.1px] bg-purple-50/40 mb-4 md:mb-5" />
+                <div className="w-97 md:w-full h-[0.5px] bg-purple-50/40 mb-4 md:mb-5" />
 
                 {/* Copyright */}
                 <p className="text-[8px] md:text-xs lg:text-sm text-purple-50/60 text-center leading-relaxed">

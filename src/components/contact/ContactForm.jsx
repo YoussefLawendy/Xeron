@@ -30,7 +30,7 @@ function GradientInput({ className = '', ...props }) {
                 onFocus={() => setFocused(true)}
                 onBlur={() => setFocused(false)}
                 className={`w-full bg-purple-975 rounded-[7px] px-4 py-3
-                    text-[14px] text-content-primary placeholder:text-content-muted
+                    text-xs md:text-[14px] text-content-primary placeholder:text-content-muted
                     outline-none transition-colors duration-200 ${className}`}
             />
         </GradientField>
@@ -47,7 +47,7 @@ function GradientTextarea({ className = '', ...props }) {
                 onFocus={() => setFocused(true)}
                 onBlur={() => setFocused(false)}
                 className={`w-full bg-purple-975 rounded-[8px] px-4 py-4
-                    text-[14px] text-content-primary placeholder:text-content-muted
+                    text-xs md:text-[14px] text-content-primary placeholder:text-content-muted
                     outline-none resize-y transition-colors duration-200 ${className}`}
             />
         </GradientField>
@@ -57,7 +57,7 @@ function GradientTextarea({ className = '', ...props }) {
 // ─── Gradient radio button ────────────────────────────────────────────────────
 function RadioButton({ label, checked, onChange }) {
     return (
-        <label className="flex items-center gap-2 text-[14px] text-content-secondary cursor-pointer">
+        <label className="flex items-center gap-2 text-xs md:text-[14px] text-content-secondary cursor-pointer">
             <input
                 type="radio"
                 name="serviceType"
@@ -93,34 +93,34 @@ export default function ContactForm() {
     const [serviceType, setServiceType] = useState('Web');
 
     return (
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4 md:gap-8">
 
             {/* Logo — centered */}
-            <div className="flex items-center justify-center mb-12 mt-4">
-                <img src="/Logo.svg" alt="Xeron" className="h-9 w-auto" />
+            <div className="flex items-center justify-center mb-6 md:mb-12 mt-0 md:mt-4">
+                <img src="/Logo.svg" alt="Xeron" className="h-6 md:h-9 w-auto" />
             </div>
 
             {/* Name + Company */}
             <div className="flex gap-6">
                 <div className="flex flex-col gap-4 flex-1">
-                    <label className="text-[16px] font-bold text-purple-50">Name</label>
+                    <label className="text-sm md:text-[16px] font-bold text-purple-50">Name</label>
                     <GradientInput type="text" placeholder="Youssef" />
                 </div>
                 <div className="flex flex-col gap-4 flex-1">
-                    <label className="text-[16px] font-bold text-purple-50">Company</label>
+                    <label className="text-sm md:text-[16px] font-bold text-purple-50">Company</label>
                     <GradientInput type="text" placeholder="Xeron" />
                 </div>
             </div>
 
             {/* Email */}
             <div className="flex flex-col gap-4">
-                <label className="text-[16px] font-bold text-purple-50">Email</label>
+                <label className="text-sm md:text-[16px] font-bold text-purple-50">Email</label>
                 <GradientInput type="email" placeholder="example@email.com" />
             </div>
 
             {/* Phone */}
             <div className="flex flex-col gap-4">
-                <label className="text-[16px] font-bold text-purple-50">
+                <label className="text-sm md:text-[16px] font-bold text-purple-50">
                     Phone number
                 </label>
 
@@ -137,7 +137,7 @@ export default function ContactForm() {
 
             {/* Service type */}
             <div className="flex flex-col gap-4">
-                <label className="text-[16px] font-bold text-purple-50">Service Type</label>
+                <label className="text-sm md:text-[16px] font-bold text-purple-50">Service Type</label>
                 <div className="flex flex-wrap gap-5">
                     {serviceTypes.map((type) => (
                         <RadioButton
@@ -152,7 +152,7 @@ export default function ContactForm() {
 
             {/* Project brief */}
             <div className="flex flex-col gap-4">
-                <label className="text-[16px] font-bold text-purple-50">Project brief</label>
+                <label className="text-sm md:text-[16px] font-bold text-purple-50">Project brief</label>
                 <GradientTextarea
                     placeholder="Type your message here..."
                     rows={4}
