@@ -8,7 +8,7 @@ export default function SectionHeader({
 }) {
     return (
         <div
-            className={`max-w-7xl mb-[40px] md:mb-[56px] lg:mb-[80px] ${centered ? 'text-center mx-auto' : ''
+            className={`max-w-7xl mb-[40px] md:mb-[56px] lg:my-40 ${centered ? 'text-center mx-auto' : ''
                 }`}
         >
             <h2 className="font-display text-[32px] md:text-[48px] lg:text-[64px] font-extrabold text-content-primary tracking-tight leading-tight mb-3">
