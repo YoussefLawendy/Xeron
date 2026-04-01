@@ -2,12 +2,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Badge from '@/components/ui/Badge';
 
-export default function PortfolioCard({ item }) {
+export default function PortfolioCard({ item, variant = 'default' }) {
+    const sizeClass =
+        variant === 'portfolio'
+            ? 'w-full aspect-3/2 sm:aspect-square sm:max-w-[400px] sm:mx-auto'
+            : 'aspect-3/2';
+
     return (
         <Link
             href={`/portfolio/${item.slug}`}
-            className="block relative rounded-2xl overflow-hidden aspect-3/2
-                transition-all duration-200 hover:-translate-y-1 hover:shadow-card group"
+            className={`block relative rounded-2xl overflow-hidden ${sizeClass}
+                transition-all duration-200 hover:-translate-y-1 hover:shadow-card group`}
         >
             {/* Image fills the entire card */}
             <Image

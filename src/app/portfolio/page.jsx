@@ -9,16 +9,16 @@ export const metadata = {
 
 export default function PortfolioPage() {
     return (
-        <div className="pt-32 pb-20 px-6">
-            <div className="max-w-7xl mx-auto">
+        <div className="pt-24 md:pt-32 pb-12 md:pb-20 px-4 md:px-6">
+            <div className="max-w-7xl mt-16 md:mt-32 lg:mt-40 mx-auto">
                 <SectionHeader
                     title="What We've Built"
                     subtitle="Real projects. Real impact. Built for people who think bigger."
                     centered
                 />
-                <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {portfolio.map((item) => (
-                        <PortfolioCard key={item.slug} item={item} />
+                        <PortfolioCard key={item.slug} item={item} variant="portfolio" />
                     ))}
                 </div>
             </div>
