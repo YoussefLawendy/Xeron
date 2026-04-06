@@ -5,7 +5,7 @@ import Badge from '@/components/ui/Badge';
 export default function PortfolioCard({ item, variant = 'default' }) {
     const sizeClass =
         variant === 'portfolio'
-            ? 'w-full aspect-3/2 sm:aspect-square sm:max-w-[400px] sm:mx-auto '
+            ? 'w-full aspect-3/2 sm:aspect-square'
             : 'aspect-3/2';
     const badgeClass =
         variant === 'portfolio'

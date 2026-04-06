@@ -1,6 +1,15 @@
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 
+
+{/* Truncate Words */}
+const truncateWords = (text, limit) => {
+    const words = text.split(' ');
+    return words.length > limit
+        ? words.slice(0, limit).join(' ') + '...'
+        : text;
+};
+
 export default function ServiceCard({ service }) {
     return (
         <article
@@ -37,7 +46,7 @@ export default function ServiceCard({ service }) {
                         </h3>
 
                         <p className="text-xs leading-relaxed text-purple-50/80">
-                            {service.shortDesc}
+                            {truncateWords(service.shortDesc, 25)}
                         </p>
                     </div>
 

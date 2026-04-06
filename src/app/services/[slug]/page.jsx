@@ -156,7 +156,7 @@ export default function ServiceDetailPage() {
                         {/* Scrollable content — Responsive: scrollable on desktop, natural on mobile */}
                         <div
                             ref={contentRef}
-                            className="rounded-2xl border border-white/7 bg-white/2 lg:overflow-y-auto lg:max-h-[calc(100vh-450px)]"
+                            className="rounded-2xl border border-white/7 bg-white/2 lg:overflow-y-auto"
                             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                         >
                             {topics.map(({ id, heading, body }, index) => {
@@ -198,32 +198,7 @@ export default function ServiceDetailPage() {
                                 );
                             })}
                         </div>
-
-                        {/* ── Fade-out gradient + scroll hint (Desktop only) ── */}
-                        <div
-                            className={`
-                                hidden lg:block
-                                pointer-events-none absolute bottom-0 left-0 right-0 h-[300px] rounded-b-2xl
-                                transition-opacity duration-300
-                                ${isAtBottom ? 'opacity-0' : 'opacity-100'}
-                            `}
-                            style={{
-                                background: 'linear-gradient(to bottom, transparent 0%, var(--color-surface-primary, #0d0d12) 100%)',
-                            }}
-                        />
-                        <p
-                            className={`
-                                hidden lg:block
-                                absolute bottom-5 left-1/2 -translate-x-1/2
-                                text-[13px] text-content-tertiary/50 italic pointer-events-none
-                                transition-opacity duration-300
-                                ${isAtBottom ? 'opacity-0' : 'opacity-100'}
-                            `}
-                        >
-                            ↓ scroll to continue
-                        </p>
                     </div>
-
                 </div>
             </div>
         </div>
