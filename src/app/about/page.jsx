@@ -41,7 +41,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
 
                         {/* Image */}
-                        <div className="col-span-1 order-1 lg:order-0 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-full mx-auto lg:max-w-none">
+                        <div className="col-span-1 order-1 lg:order-0 gradient-border-shell gradient-border-shell--glow rounded-[20px] w-full max-w-full mx-auto lg:max-w-none">
                             <div className="relative w-full h-full aspect-16/10 md:aspect-video min-h-[220px] md:min-h-[320px] rounded-[16px] overflow-hidden bg-white">
                                 <Image
                                     src="/ImagePlaceholder.png"
@@ -77,7 +77,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
 
                         {/* Image */}
-                        <div className="col-span-1 order-1 lg:order-2 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-full mx-auto lg:max-w-none">
+                        <div className="col-span-1 order-1 lg:order-2 gradient-border-shell gradient-border-shell--glow rounded-[20px] w-full max-w-full mx-auto lg:max-w-none">
                             <div className="relative w-full h-full aspect-16/10 md:aspect-video min-h-[220px] md:min-h-[320px] rounded-[16px] overflow-hidden bg-white">
                                 <Image
                                     src="/ImagePlaceholder.png"
@@ -113,7 +113,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[40px] md:gap-[56px] lg:gap-[80px] items-stretch">
 
                         {/* Image */}
-                        <div className="col-span-1 order-1 lg:order-0 p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-full mx-auto lg:max-w-none">
+                        <div className="col-span-1 order-1 lg:order-0 gradient-border-shell gradient-border-shell--glow rounded-[20px] w-full max-w-full mx-auto lg:max-w-none">
                             <div className="relative w-full h-full aspect-16/10 md:aspect-video min-h-[220px] md:min-h-[320px] rounded-[16px] overflow-hidden bg-white">
                                 <Image
                                     src="/ImagePlaceholder.png"

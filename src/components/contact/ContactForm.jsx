@@ -11,8 +11,7 @@ const serviceTypes = ['Web', 'Mobile', 'Design'];
 function GradientField({ children, focused }) {
     return (
         <div
-            className={`p-[2px] rounded-lg transition-opacity duration-200 bg-linear-to-bl
-                from-purple-200 via-purple-50 to-purple-500
+            className={`gradient-border-shell gradient-border-shell--bl rounded-lg transition-opacity duration-200
                 ${focused ? 'opacity-100' : 'opacity-60'}`}
         >
             {children}
@@ -69,8 +68,7 @@ function RadioButton({ label, checked, onChange }) {
 
             {/* Outer ring — always gradient border, opacity fades when unchecked */}
             <span
-                className={`relative w-6 h-6 rounded-full shrink-0 p-[2px]
-                    bg-linear-to-bl from-purple-200 via-purple-50 to-purple-500
+                className={`relative w-6 h-6 rounded-full shrink-0 gradient-border-shell gradient-border-shell--bl
                     transition-opacity duration-200
                     ${checked ? 'opacity-100' : 'opacity-40'}`}
             >

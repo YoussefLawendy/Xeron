@@ -21,7 +21,7 @@ export default function ContactPage() {
                 <div className="mt-16 flex flex-col md:flex-row items-start gap-10">
 
                     {/* Form card — gradient border shell */}
-                    <div className="relative flex-[1.4] p-[2px] rounded-2xl bg-linear-to-bl from-purple-200 via-purple-50 to-purple-500">
+                    <div className="relative flex-[1.4] gradient-border-shell gradient-border-shell--bl rounded-2xl">
                         <div
                             className="rounded-2xl bg-linear-to-br from-purple-950 to-purple-1000"
                             style={{ padding: '40px 56px' }}

@@ -65,7 +65,7 @@ export default async function PortfolioProcessSectionPage({ params }) {
                     <Button href="" variant="primary" className='sm:text-xs md:text-[16px] lg:text-[18px]'>View all</Button>
                 </div>
 
-                <div className="p-[2px] rounded-[20px] bg-linear-to-br from-purple-200 via-purple-50 to-purple-500 shadow-[0_0_24px_rgba(109,0,255,0.35)] w-full max-w-5xl mx-auto mb-14">
+                <div className="gradient-border-shell gradient-border-shell--glow rounded-[20px] w-full max-w-5xl mx-auto mb-14">
                     <div className="relative w-full aspect-video min-h-[240px] md:min-h-[360px] rounded-[16px] overflow-hidden bg-white">
                         <Image
                             src={heroSrc}

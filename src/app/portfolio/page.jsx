@@ -16,7 +16,7 @@ export default function PortfolioPage() {
                     subtitle="Real projects. Real impact. Built for people who think bigger."
                     centered
                 />
-                <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
                     {portfolio.map((item) => (
                         <PortfolioCard key={item.slug} item={item} variant="portfolio" />
                     ))}

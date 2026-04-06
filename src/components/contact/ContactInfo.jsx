@@ -11,7 +11,8 @@ const socials = [
 ];
 
 // Single-line string — prevents SSR/client whitespace normalization mismatch
-const gradientRingClass = 'relative inline-flex rounded-full p-[1px] bg-gradient-to-br from-purple-200 via-purple-50 to-purple-500 opacity-50 hover:opacity-100 transition-opacity duration-200';
+const gradientRingClass =
+    'relative inline-flex rounded-full gradient-border-shell gradient-border-shell--thin opacity-50 hover:opacity-100 transition-opacity duration-200';
 
 function GradientBorderIcon({ icon, href, label }) {
     return (

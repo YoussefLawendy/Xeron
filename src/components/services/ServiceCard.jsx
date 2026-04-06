@@ -5,8 +5,8 @@ export default function ServiceCard({ service }) {
     return (
         <article
             className="
-            group relative rounded-2xl p-[2px]
-            bg-linear-to-br from-purple-200 via-purple-50 to-purple-500
+            gradient-border-shell rounded-2xl
+            group relative
             transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl
         "
         >

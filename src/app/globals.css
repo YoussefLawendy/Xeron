@@ -50,3 +50,24 @@ body {
   color: var(--foreground);
   font-family: var(--font-ibm-plex-sans), sans-serif;
 }
+
+/*
+  Gradient border shell — outer wrapper with padding as the “border”.
+*/
+.gradient-border-shell {
+  padding: 2px;
+  /* Matches @theme purple-200 / purple-50 / purple-500 */
+  background: linear-gradient(to bottom right, #b6a8ff, #e7e4ff, #7213ff);
+}
+
+.gradient-border-shell--bl {
+  background: linear-gradient(to bottom left, #b6a8ff, #e7e4ff, #7213ff);
+}
+
+.gradient-border-shell--glow {
+  box-shadow: 0 0 24px rgba(109, 0, 255, 0.35);
+}
+
+.gradient-border-shell--thin {
+  padding: 1px;
+}
