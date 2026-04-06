@@ -32,10 +32,10 @@ export default function PortfolioCard({ item, variant = 'default' }) {
 
                 {/* Text content pinned to the bottom over the image */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-                    <h3 className="font-display text-sm md:text-[15px] font-bold text-white leading-snug">
+                    <h3 className="font-display text-xs md:text-[15px] font-bold text-white leading-snug">
                         {item.title}
                     </h3>
-                    <p className="text-[10px] md:text-[13px] text-white/75 leading-[1.65]">
+                    <p className="text-[8px] md:text-[13px] text-white/50 leading-[1.65]">
                         {item.description}
                     </p>
                     <div className={badgeClass}>
