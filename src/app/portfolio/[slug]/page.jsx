@@ -140,7 +140,7 @@ export default async function PortfolioDetailPage({ params }) {
                 </div>
 
                 {/* ── Back ── */}
-                <Button href="/portfolio" variant="outline">
+                <Button href="/portfolio" variant="outline"className='text-[10px] sm:text-xs md:text-[16px] lg:text-[18px]'>
                     ← Back to Portfolio
                 </Button>
 

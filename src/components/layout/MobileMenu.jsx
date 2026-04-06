@@ -13,13 +13,13 @@ const menuItemVariants = {
 
 export default function MobileMenu({ links, onClose }) {
   return (
-    <motion.div className="px-2 pt-2 pb-3 space-y-1 text-gray-300">
+    <motion.div className="px-2 pt-2 pb-3 space-y-1 text-purple-50/50">
       {links.map((l) => (
         <motion.div key={l.href} variants={menuItemVariants}>
           <Link
             href={l.href}
             onClick={onClose}
-            className="block px-3 py-2 rounded-md text-base font-medium transition duration-300 hover:text-purple-500"
+            className="block px-3 py-2 rounded-md text-base text-purple-50/50 hover:text-white font-medium transition duration-300"
           >
             {l.label}
           </Link>

@@ -48,7 +48,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed z-50 transition-all duration-300 top-3 lg:top-5 left-3 right-3 w-auto lg:left-1/2 lg:right-auto lg:-translate-x-1/2 lg:w-7xl max-w-7xl rounded-3xl shadow-sm backdrop-blur-md ${scrolled ? 'bg-black/5 border border-white/5' : 'bg-white/5  border border-white/5'}`}
+            className={`fixed z-50 transition-all duration-300 top-3 lg:top-5 left-3 right-3 w-auto lg:left-1/2 lg:right-auto lg:-translate-x-1/2 lg:w-7xl max-w-7xl rounded-3xl shadow-sm backdrop-blur-md ${scrolled ? 'bg-purple-1000/5 border border-white/5' : 'bg-white/5  border border-white/5'}`}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 lg:h-20 items-center">
@@ -82,7 +82,7 @@ export default function Navbar() {
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             aria-expanded={isMenuOpen}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-purple-500 focus:outline-none transition duration-300"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-purple-50/70 hover:text-purple-50 focus:outline-none transition duration-300"
                         >
                             <span className="sr-only">Toggle menu</span>
                             {isMenuOpen
