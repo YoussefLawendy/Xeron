@@ -75,7 +75,7 @@ export default async function PortfolioDetailPage({ params }) {
                             The Solution
                         </h2>
                         {item.solution?.map((para, i) => (
-                            <p key={i} className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75] opacity-70">
+                            <p key={i} className="text-xs md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75] opacity-70">
                                 {para}
                             </p>
                         ))}
@@ -103,7 +103,7 @@ export default async function PortfolioDetailPage({ params }) {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20">
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-20">
                         {item.processSteps.map((step, i) => (
                             <Link
                                 key={i}
@@ -119,14 +119,14 @@ export default async function PortfolioDetailPage({ params }) {
                                             src={step.image || item.image || '/ImagePlaceholder.png'}
                                             alt={`${item.title} — ${step.name}`}
                                             fill
-                                            sizes="(max-width: 640px) 100vw, 33vw"
+                                            sizes="33vw"
                                             className="object-cover"
                                         />
 
                                         {/* Overlay */}
-                                        <div className="absolute inset-0 bg-linear-to-b from-transparent to-purple-1000/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                                        <div className="absolute inset-0 bg-linear-to-b from-transparent to-purple-1000/80 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 flex items-end p-1.5 sm:p-2 md:p-4">
                                             <div className="w-full text-purple-50">
-                                                <h3 className="text-base md:text-2xl text-center font-bold">
+                                                <h3 className="text-[10px] sm:text-xs md:text-2xl text-center font-bold leading-tight line-clamp-2">
                                                     {step.name}
                                                 </h3>
                                             </div>
