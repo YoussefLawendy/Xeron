@@ -7,6 +7,10 @@ export default function PortfolioCard({ item, variant = 'default' }) {
         variant === 'portfolio'
             ? 'w-full aspect-3/2 sm:aspect-square sm:max-w-[400px] sm:mx-auto '
             : 'aspect-3/2';
+    const badgeClass =
+        variant === 'portfolio'
+            ? 'hidden lg:flex flex-wrap gap-2 mt-1 opacity-70'
+            : 'flex flex-wrap gap-2 mt-1 opacity-70';
 
     return (
         <Link
@@ -28,13 +32,13 @@ export default function PortfolioCard({ item, variant = 'default' }) {
 
                 {/* Text content pinned to the bottom over the image */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-                    <h3 className="font-display text-[16px] md:text-[15px] font-bold text-white leading-snug">
+                    <h3 className="font-display text-sm md:text-[15px] font-bold text-white leading-snug">
                         {item.title}
                     </h3>
-                    <p className="text-xs md:text-[13px] text-white/75 leading-[1.65]">
+                    <p className="text-[10px] md:text-[13px] text-white/75 leading-[1.65]">
                         {item.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mt-1 opacity-70">
+                    <div className={badgeClass}>
                         {item.tags.map((tag) => (
                             <Badge key={tag}>{tag}</Badge>
                         ))}

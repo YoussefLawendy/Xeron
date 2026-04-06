@@ -13,9 +13,9 @@ export default function PortfolioSection() {
                     centered
                 />
 
-                <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="mt-16 grid grid-cols-2 sm:grid-cols-2 gap-6">
                     {portfolio.slice(0, 4).map((item) => (
-                        <PortfolioCard key={item.slug} item={item} />
+                        <PortfolioCard key={item.slug} item={item} variant="portfolio" />
                     ))}
                 </div>
 

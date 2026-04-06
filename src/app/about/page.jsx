@@ -55,17 +55,17 @@ export default function AboutPage() {
 
                         {/* Content */}
                         <div className="col-span-1 lg:col-span-2 order-2 lg:order-0 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 XERON is a full-service digital agency built for startups and entrepreneurs.
                                 We design, develop, and brand — websites, mobile apps, and visual identities
                                 that make growing businesses impossible to ignore.
                             </p>
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
                             </p>
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
@@ -91,17 +91,17 @@ export default function AboutPage() {
 
                         {/* Content */}
                         <div className="col-span-1 lg:col-span-2 order-2 lg:order-1 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 XERON is a full-service digital agency built for startups and entrepreneurs.
                                 We design, develop, and brand — websites, mobile apps, and visual identities
                                 that make growing businesses impossible to ignore.
                             </p>
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
                             </p>
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
@@ -127,17 +127,17 @@ export default function AboutPage() {
 
                         {/* Content */}
                         <div className="col-span-1 lg:col-span-2 order-2 lg:order-0 flex flex-col gap-[28px] md:gap-[40px] lg:gap-[54px]">
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 XERON is a full-service digital agency built for startups and entrepreneurs.
                                 We design, develop, and brand — websites, mobile apps, and visual identities
                                 that make growing businesses impossible to ignore.
                             </p>
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
                             </p>
-                            <p className="text-sm md:text-[16px] lg:text-[24px] text-[#6F6E7B] leading-[1.75]">
+                            <p className="text-sm md:text-[16px] lg:text-[18px] text-[#6F6E7B] leading-[1.75]">
                                 Born from a college idea in 2022, we turned a friendship and a passion for
                                 technology into something real. Today, every project we take on carries that
                                 same energy — focused, intentional, and always built to last.
